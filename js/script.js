@@ -42,26 +42,26 @@ const titleClickHandler = function(event){
      console.log('targetArticle', targetArticle);
 
   
-/*
+
      const optArticleSelector = '.post',
      optTitleSelector = '.post-title',
-     optTitleListSelector = '.titles';*/
+     optTitleListSelector = '.titles';
 
 /*function generateTitleLinks(){*/
 
     /* [done??] remove contents of titleList */
-    /*  const titleList = document.querySelector(optTitleListSelector);
+      const titleList = document.querySelector(optTitleListSelector);
       titleList.innerHTML='';
-      console.log(titleList);*/
+      console.log(titleList);
 
     /* [done??] for each article */
-    /*  const article = document.querySelectorAll(optArticleSelector);
-      console.log(optArticleSelector);*/
+      const article = document.querySelectorAll(optArticleSelector);
+      console.log(optArticleSelector);
 
 
     /* [done??] get the article id */
-    /*  const articleId = article.getAttribute('id');
-      console.log(articleID);*/
+      const articleId = article.getAttribute('id');
+      console.log(articleID);
 
     /* find the title element */
 
@@ -72,8 +72,8 @@ const titleClickHandler = function(event){
     /* insert link into titleList */
 
 
-/*
-generateTitleLinks();*/
+
+generateTitleLinks();
 
 
 
