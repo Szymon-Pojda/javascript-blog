@@ -60,7 +60,8 @@ function generateTitleLinks(){
 
 
     /* get the article id */
-      
+      const articleId = article.getAttribute('id');
+      console.log(articleID);
 
     /* find the title element */
 
