@@ -36,7 +36,7 @@ const titleClickHandler = function(event){
     const targetArticle = document.querySelector(articleSelector);
     console.log(targetArticle);
 
-    /*[in progres] add class 'active' to the correct article */
+    /*[Done??] add class 'active' to the correct article */
 
      targetArticle.classList.add('active');
      console.log('targetArticle', targetArticle);
@@ -49,14 +49,18 @@ const titleClickHandler = function(event){
 
 function generateTitleLinks(){
 
-  /* remove contents of titleList */
-    const titleList = document.querySelector(optTitleListSelector);
+    /* remove contents of titleList */
+      const titleList = document.querySelector(optTitleListSelector);
       titleList.innerHTML='';
       console.log(titleList);
 
-  /* for each article */
+    /* for each article */
+      const article = document.querySelectorAll(optArticleSelector);
+      console.log(optArticleSelector);
+
 
     /* get the article id */
+      
 
     /* find the title element */
 
