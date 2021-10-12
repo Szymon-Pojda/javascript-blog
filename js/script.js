@@ -47,7 +47,7 @@ const titleClickHandler = function(event){
      optTitleSelector = '.post-title',
      optTitleListSelector = '.titles';
 
-/*function generateTitleLinks(){*/
+function generateTitleLinks(){
 
     /* [done??] remove contents of titleList */
       const titleList = document.querySelector(optTitleListSelector);
@@ -75,14 +75,17 @@ const titleClickHandler = function(event){
 
         /*[done??] insert link into titleList */
         html = html + linkHTML;
-        console.log(html);
+        
+      
       }
       titleList.innerHTML = html;
+      console.log(html);
+    } 
 generateTitleLinks();
 
 
 
-
+}
 
   
   const links = document.querySelectorAll('.titles a');
@@ -91,11 +94,8 @@ generateTitleLinks();
   for(let link of links){
     link.addEventListener('click', titleClickHandler);
   }
-}
+
 /*document.getElementById('test-button').addEventListener('click', function(){
     const links = document.querySelectorAll('.titles a');
     console.log('links:', links);
   });*/
-
-
-  
