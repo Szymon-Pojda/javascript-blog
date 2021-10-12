@@ -1,3 +1,5 @@
+'use strict';
+
 const titleClickHandler = function(event){
     event.preventDefault();
     const clickedElement = this;
@@ -59,6 +61,7 @@ function generateTitleLinks(){
       console.log(optArticleSelector);
 
       for(let article of articles){
+        
         /* [done??] get the article id */
         const articleId = article.getAttribute('id');
         console.log(articleID);
