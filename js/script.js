@@ -58,33 +58,40 @@ const titleClickHandler = function(event){
       const article = document.querySelectorAll(optArticleSelector);
       console.log(optArticleSelector);
 
+      for(let article of articles){
+        /* [done??] get the article id */
+        const articleId = article.getAttribute('id');
+        console.log(articleID);
 
-    /* [done??] get the article id */
-      const articleId = article.getAttribute('id');
-      console.log(articleID);
-
-    /* find the title element */
-
-    /* get the title from the title element */
-
-    /* create HTML of the link */
-
-    /* insert link into titleList */
+        /* [done?]find the title element */
+        const articleTitle = article.querySelector(optTitleSelector).innerHTML;
 
 
+        /*[???] get the title from the title element */
 
+        /*[done??] create HTML of the link */
+        const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+        console.log(linkHTML);
+
+        /*[done??] insert link into titleList */
+        html = html + linkHTML;
+        console.log(html);
+      }
+      titleList.innerHTML = html;
 generateTitleLinks();
 
 
 
 
-}
+
   
   const links = document.querySelectorAll('.titles a');
-  
+  console.log('links', links);
+    
   for(let link of links){
     link.addEventListener('click', titleClickHandler);
   }
+}
 /*document.getElementById('test-button').addEventListener('click', function(){
     const links = document.querySelectorAll('.titles a');
     console.log('links:', links);
