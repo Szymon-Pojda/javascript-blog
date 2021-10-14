@@ -87,6 +87,13 @@ function generateTitleLinks(){
       }
       /*titleList.innerHTML = html;
       console.log(html);*/
+      const links = document.querySelectorAll('.titles a');
+      console.log( links);
+        
+      for(let link of links){
+        link.addEventListener('click', titleClickHandler);
+      }
+
     } 
 generateTitleLinks();
 
@@ -95,12 +102,7 @@ generateTitleLinks();
 
 
   
-  const links = document.querySelectorAll('.titles a');
-  console.log( links);
-    
-  for(let link of links){
-    link.addEventListener('click', titleClickHandler);
-  }
+  
 
 /*document.getElementById('test-button').addEventListener('click', function(){
     const links = document.querySelectorAll('.titles a');
