@@ -143,11 +143,12 @@ generateTitleLinks();
         console.log(tagLinkHTML);
 
         /* add generated code to html variable */
-        html = tagLinkHTML;
+        html = html + tagLinkHTML;
       }
       /* END LOOP: for each tag */
   
       /* insert HTML of all the links into the tags wrapper */
+      titleList.innerHTML = html;
     }
     /* END LOOP: for every article: */
   }
