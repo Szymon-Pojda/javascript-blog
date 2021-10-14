@@ -81,7 +81,7 @@ function generateTitleLinks(){
         /*[done??] insert link into titleList */
         titleList.innerHTML = titleList.innerHTML + linkHTML;
         
-        /*html = html + linkHTML;*/
+        html = linkHTML;
         
       
       }
@@ -129,13 +129,19 @@ generateTitleLinks();
       console.log(articleTags);
   
       /* split tags into array */
-  
+      const articleTagsArray = articleTags.split(' ');
+      console.log(articleTags);
+
       /* START LOOP: for each tag */
-  
+      for(let tag of articleTagsArray){
+      console.log(tag);
         /* generate HTML of the link */
-  
+        const tagLinkHTML = '<li><a href="#tag-' + tag + '"><span>' + tag + '</span></a></li>';
+        console.log(tagLinkHTML);
+
         /* add generated code to html variable */
-  
+
+      }
       /* END LOOP: for each tag */
   
       /* insert HTML of all the links into the tags wrapper */
