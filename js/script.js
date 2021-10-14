@@ -135,12 +135,13 @@ generateTitleLinks();
       /* START LOOP: for each tag */
       for(let tag of articleTagsArray){
       console.log(tag);
+      
         /* generate HTML of the link */
         const tagLinkHTML = '<li><a href="#tag-' + tag + '"><span>' + tag + '</span></a></li>';
         console.log(tagLinkHTML);
 
         /* add generated code to html variable */
-
+        html = tagLinkHTML;
       }
       /* END LOOP: for each tag */
   
