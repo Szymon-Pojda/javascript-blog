@@ -51,7 +51,8 @@ const titleClickHandler = function(event){
      optTitleListSelector = '.titles';
      optArticleTagsSelector = '.post-tags .list'
 
-function generateTitleLinks(){
+function generateTitleLinks(customSelector = ''){
+  console.log(customSelector);
 
     /* [done??] remove contents of titleList */
       const titleList = document.querySelector(optTitleListSelector);
@@ -59,7 +60,7 @@ function generateTitleLinks(){
       console.log(titleList);
 
     /* [done??] for each article */
-      const articles = document.querySelectorAll(optArticleSelector);
+    const articles = document.querySelectorAll(optArticleSelector + customSelector);
       console.log(optArticleSelector);
 
       for(let article of articles){
@@ -196,12 +197,13 @@ generateTitleLinks();
   
   function addClickListenersToTags(){
     /* find all links to tags */
-  
+    const tagLinks = document.querySelectorAll('.post-tags .list a');
     /* START LOOP: for each link */
-  
+    for(let tagLink of tagLinks){
       /* add tagClickHandler as event listener for that link */
-  
+      tagLink.addEventListener('click' , tagClickHandler);
     /* END LOOP: for each link */
+    }
   }
   
   addClickListenersToTags();
