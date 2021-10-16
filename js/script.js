@@ -180,6 +180,7 @@
 
     /*[NEW] add HTML from allTagsHTML to tagList */
     tagList.innerHTML = allTagsHTML;
+    console.log(allTags);
   }
 
   generateTags();
