@@ -51,7 +51,9 @@
     optTitleListSelector = '.titles',
     optArticleTagsSelector = '.post-tags .list',
     optArticleAuthorSelector = '.post-author',
-    optTagsListSelector = '.tags.list';
+    optTagsListSelector = '.tags.list',
+    optCloudClassCount = '5',
+    optCloudClassPrefix = 'tag-size-';
 
   function generateTitleLinks(customSelector = '') {
     console.log(customSelector);
@@ -121,10 +123,10 @@
         params.max = Math.max(tags[tag], params.max);
         params.min = Math.min(tags[tag], params.min);
       }
-      
+      return params;
     }
     
-
+    function calculateTagClass(count, params);
 
   function generateTags() {
     /* [NEW] create a new variable allTags with an empty object */
@@ -192,8 +194,10 @@
     /* [NEW] START LOOP: for each tag in allTags: */
     for (let tag in allTags) {
       /* [NEW] generate code of a link and add it to allTagsHTML */
-      allTagsHTML += tag + ' (' + allTags[tag] + ') ';
-    }
+      //allTagsHTML += tag + ' (' + allTags[tag] + ') ';
+      allTagsHTML += '<li><a href="#tag-'+ tag +'">'+ tag +'</a>(' + allTags[tag] + ')</li>'
+      
+    } 
     /* [NEW] END LOOP: for each tag in allTags: */
 
     /*[NEW] add HTML from allTagsHTML to tagList */
