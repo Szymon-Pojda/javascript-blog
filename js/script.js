@@ -175,7 +175,7 @@
         const linkHTML = templates.tagLink(linkHTMLData);
 
         /* add generated code to html variable */
-        //html = html + tagLinkHTML;
+        html = html + linkHTML;
 
         /* [NEW] check if this link is NOT already in allTags */
         if (!allTags[tag]) {
@@ -331,14 +331,14 @@
       //console.log(authorLinkHTML);
       const linkHTMLData = { id: author, title: author };
       const linkHTML = templates.authorLink(linkHTMLData);
-
+      console.log(templates.authorLink)
       /* add generated code to html variable */
       html = html + linkHTML;
 
 
 
       /* [NEW] check if this link is NOT already in allAuthor */
-      //authorWrapper.innerHTML = html;
+      authorWrapper.innerHTML = html;
 
       if (!allAuthors[author]) {
         /* [NEW] add tag to allAuthors object */
@@ -346,9 +346,9 @@
       } else {
         allAuthors[author]++;
       }
-
+    
       /* insert HTML of all the links into the authors wrapper */
-      authorWrapper.insertAdjacentHTML('afterbegin', linkHTML)
+      //authorWrapper.insertAdjacentHTML('afterbegin', linkHTML)
     }
 
     /* [NEW] find list of tags in right column */
