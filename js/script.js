@@ -331,7 +331,7 @@
       //console.log(authorLinkHTML);
       const linkHTMLData = { id: author, title: author };
       const linkHTML = templates.authorLink(linkHTMLData);
-      console.log(templates.authorLink)
+      //console.log(templates.authorLink)
       /* add generated code to html variable */
       html = html + linkHTML;
 
