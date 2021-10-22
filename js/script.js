@@ -58,12 +58,12 @@
     optTitleListSelector = '.titles',
     optArticleTagsSelector = '.post-tags .list',
     optArticleAuthorSelector = '.post-author',
-    optTagsLinksSelector = '.post-tags .list a',
-    optTagsListSelector = '.tags.list',
+    optTagLinksSelector = '.post-tags .list a',
+    optTagsListSelector = '.tags.list a',
     optCloudClassCount = '5',
     optCloudClassPrefix = 'tag-size-',
     optAuthorLinksSelector = '.post-authors .list a',
-    optAuthorsListSelector = '.authors.list',
+    optAuthorsListSelector = '.authors.list a',
     optAuthorClassCount = '5',
     optAuthorClassPrefix = 'tag-size-';
 
@@ -272,7 +272,7 @@
   function addClickListenersToTags() {
 
     /* find all links to tags */
-    const tagLinks = document.querySelectorAll('.post-tags .list a');
+    const tagLinks = document.querySelectorAll(optTagsListSelector);
 
     /* START LOOP: for each link */
     for (let tagLink of tagLinks) {
@@ -333,7 +333,7 @@
       //console.log(authorLinkHTML);
       const linkHTMLData = { id: author, title: author };
       const linkHTML = templates.authorLink(linkHTMLData);
-      //console.log(templates.authorLink)
+      console.log(linkHTML)
       /* add generated code to html variable */
       html = html + linkHTML;
 
