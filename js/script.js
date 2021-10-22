@@ -58,9 +58,11 @@
     optTitleListSelector = '.titles',
     optArticleTagsSelector = '.post-tags .list',
     optArticleAuthorSelector = '.post-author',
+    optTagsLinksSelector = '.post-tags .list a',
     optTagsListSelector = '.tags.list',
     optCloudClassCount = '5',
     optCloudClassPrefix = 'tag-size-',
+    optAuthorLinksSelector = '.post-authors .list a',
     optAuthorsListSelector = '.authors.list',
     optAuthorClassCount = '5',
     optAuthorClassPrefix = 'tag-size-';
@@ -338,7 +340,7 @@
 
 
       /* [NEW] check if this link is NOT already in allAuthor */
-      authorWrapper.innerHTML = html;
+      authorWrapper.innerHTML = linkHTML;
 
       if (!allAuthors[author]) {
         /* [NEW] add tag to allAuthors object */
@@ -401,7 +403,7 @@
 
     /* make a new constant "author" and extract tag from the "href" constant */
     const author = href.replace('#author-', '');
-    console.log('clicked:', tag);
+    console.log('clicked:', author);
 
     /* find all author links with class active */
     const tagLinks = document.querySelectorAll('a.active[href^="#author-"]');
