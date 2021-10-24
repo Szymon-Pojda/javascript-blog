@@ -59,11 +59,11 @@
     optArticleTagsSelector = '.post-tags .list',
     optArticleAuthorSelector = '.post-author',
     optTagLinkSelector = '.post-tags .list a',
-    optTagsListSelector = '.tags.list a',
+    optTagsListSelector = '.tags.list a ',
     optCloudClassCount = '5',
     optCloudClassPrefix = 'tag-size-',
     optAuthorLinksSelector = '.post-authors .list a',
-    optAuthorsListSelector = '.authors.list a',
+    optAuthorsListSelector = '.post-authors.list a',
     optAuthorClassCount = '5',
     optAuthorClassPrefix = 'tag-size-';
 
@@ -272,7 +272,7 @@
   function addClickListenersToTags() {
 
     /* find all links to tags */
-    const tagLinks = document.querySelectorAll(optTagsListSelector);
+    const tagLinks = document.querySelectorAll('.tags.list a');
 
     /* START LOOP: for each link */
     for (let tagLink of tagLinks) {
@@ -383,8 +383,8 @@
     /*[NEW] add HTML from allTagsHTML to tagList */
     //authorList.innerHTML = allAuthorHTML;
     //console.log(authorList);
-    authorList.innerHTML = templates.authorCloudLink(allAuthorsData);
-    console.log(allAuthorsData)
+    //authorList.innerHTML = templates.authorCloudLink(allAuthorsData);
+    console.log(authorList)
 
   }
   generateAuthors();
@@ -406,10 +406,10 @@
     console.log('clicked:', author);
 
     /* find all author links with class active */
-    const tagLinks = document.querySelectorAll('a.active[href^="#author-"]');
+    const authorLinks = document.querySelectorAll('a.active[href^="#author-"]');
 
     /* START LOOP: for each active author link */
-    for (let tagLink of tagLinks) {
+    for (let authorLink of authorLinks) {
 
       /* remove class active */
       authorLink.classList.remove('active');
@@ -424,7 +424,7 @@
 
   function addClickListenersToAuthors() {
     /* find all links to authors */
-    const authorLinks = document.querySelectorAll('.post-authors .list a');
+    const authorLinks = document.querySelectorAll('.post-authors');
 
     /* START LOOP: for each link */
     for (let authorLink of authorLinks) {
