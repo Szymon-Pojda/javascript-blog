@@ -58,12 +58,12 @@
     optTitleListSelector = '.titles',
     optArticleTagsSelector = '.post-tags .list',
     optArticleAuthorSelector = '.post-author',
-    optTagLinkSelector = '.post-tags .list a',
+    optTagLinkSelector = '.post-tags, .list a',
     optTagsListSelector = '.tags.list a ',
     optCloudClassCount = '5',
     optCloudClassPrefix = 'tag-size-',
-    optAuthorLinksSelector = '.post-authors .list a',
-    optAuthorsListSelector = '.post-authors.list a',
+    optAuthorLinksSelector = '.post-author a, .authors.list a',
+    optAuthorsListSelector = '.authors.list',
     optAuthorClassCount = '5',
     optAuthorClassPrefix = 'tag-size-';
 
@@ -272,7 +272,7 @@
   function addClickListenersToTags() {
 
     /* find all links to tags */
-    const tagLinks = document.querySelectorAll('.tags.list a');
+    const tagLinks = document.querySelectorAll(optTagLinkSelector);
 
     /* START LOOP: for each link */
     for (let tagLink of tagLinks) {
@@ -348,7 +348,7 @@
       } else {
         allAuthors[author]++;
       }
-    
+
       /* insert HTML of all the links into the authors wrapper */
       //authorWrapper.insertAdjacentHTML('afterbegin', linkHTML)
     }
@@ -383,7 +383,7 @@
     /*[NEW] add HTML from allTagsHTML to tagList */
     //authorList.innerHTML = allAuthorHTML;
     //console.log(authorList);
-    //authorList.innerHTML = templates.authorCloudLink(allAuthorsData);
+    authorList.innerHTML = templates.authorCloudLink(allAuthorsData);
     console.log(authorList)
 
   }
@@ -424,7 +424,7 @@
 
   function addClickListenersToAuthors() {
     /* find all links to authors */
-    const authorLinks = document.querySelectorAll('.post-authors');
+    const authorLinks = document.querySelectorAll(optAuthorLinksSelector);
 
     /* START LOOP: for each link */
     for (let authorLink of authorLinks) {
