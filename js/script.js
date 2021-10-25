@@ -58,7 +58,7 @@
     optTitleListSelector = '.titles',
     optArticleTagsSelector = '.post-tags .list',
     optArticleAuthorSelector = '.post-author',
-    optTagLinkSelector = '.post-tags, .list a',
+    optTagLinkSelector = '.post-tags .list a, .tags.list a',
     optTagsListSelector = '.tags.list a ',
     optCloudClassCount = '5',
     optCloudClassPrefix = 'tag-size-',
